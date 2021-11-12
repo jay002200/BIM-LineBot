@@ -31,10 +31,10 @@ line_bot_api = LineBotApi(config.get('linebot','channel_access_token'))
 handler = WebhookHandler(config.get('line-bot', 'channel_secret'))
 
 # The imgur client id, client secret, access token and refresh token
-client_id = '1fa1309b43e70d1'
-client_secret = 'e03fcf933b17d120fe0155c7d68e1fdc72ee1e0d'
-access_token = '4d84ed429f39aff4565ab3d00158bb270f778c7d'
-refresh_token = '2a372fb64ca80773bf994026477365a18e28ddc8'
+client_id = '-'
+client_secret = '-'
+access_token = '-'
+refresh_token = '-'
 client = ImgurClient(client_id, client_secret, access_token, refresh_token)
 
 @app.route("/", methods=['POST'])
@@ -77,7 +77,7 @@ def handle_message(event):
             
         topic = gettopic()
         topic_list = list(str(topic))
-        if user_id != "Uf0bc03258f4b309c5b7efa50fc8148ec":
+        if user_id != "-":
             user_list = []
             user_list.append(profile.display_name)
             user_list.append(profile.picture_url)
@@ -87,7 +87,7 @@ def handle_message(event):
             googlesheet(user_list)
         
         mainimage = ImagemapSendMessage(
-        base_url='https://imgur.com/aHWrC1L.jpg',
+        base_url='https://imgur.com/-.jpg',
         alt_text='圖片',
         base_size=BaseSize(height=720, width=1280),     
         actions=[
@@ -143,18 +143,18 @@ def handle_message(event):
     )
 
         sec_mainimage = ImagemapSendMessage(
-        base_url='https://imgur.com/GbNDTT3.jpg',
+        base_url='https://imgur.com/-.jpg',
         alt_text='圖片',
         base_size=BaseSize(height=720, width=1280),     
         actions=[
             URIImagemapAction(
-                link_uri='https://photos.app.goo.gl/ev1xG2TTapKuN3Tb6',
+                link_uri='https://photos.app.goo.gl/-',
                 area=ImagemapArea(
                     x=263, y=316, width=80, height=80
                 )
             ),
             URIImagemapAction(
-                link_uri='https://photos.app.goo.gl/sxrTuQicJvY9xBKe9',
+                link_uri='https://photos.app.goo.gl/-',
                 area=ImagemapArea(
                     x=396, y=310, width=80, height=80
                 )
@@ -178,24 +178,24 @@ def handle_message(event):
                         )
         
         Aarea = ImagemapSendMessage(
-        base_url='https://imgur.com/yTm74Po.jpg',
+        base_url='https://imgur.com/-.jpg',
         alt_text='圖片',
         base_size=BaseSize(height=720, width=1280),     
         actions=[
             URIImagemapAction(
-                link_uri='https://photos.app.goo.gl/KJbForaX5nFH4Bsj7',
+                link_uri='https://photos.app.goo.gl/-',
                 area=ImagemapArea(
                     x=365, y=87, width=80, height=80
                 )
             ),
             URIImagemapAction(
-                link_uri='https://photos.app.goo.gl/9CKSyK1UxGEVL4oY9',
+                link_uri='https://photos.app.goo.gl/-',
                 area=ImagemapArea(
                     x=593, y=267, width=80, height=80
                 )
             ),
             URIImagemapAction(
-                link_uri='https://photos.app.goo.gl/aNxzu2zJzmgHutHv7',
+                link_uri='https://photos.app.goo.gl/-',
                 area=ImagemapArea(
                     x=712, y=356, width=80, height=80
                 )
@@ -204,24 +204,24 @@ def handle_message(event):
     )
                
         Barea = ImagemapSendMessage(
-        base_url='https://imgur.com/lwCOCcj.jpg',
+        base_url='https://imgur.com/-.jpg',
         alt_text='圖片',
         base_size=BaseSize(height=720, width=1280),     
         actions=[
             URIImagemapAction(
-                link_uri='https://photos.app.goo.gl/xrkC48kfo4b2A3xr6',
+                link_uri='https://photos.app.goo.gl/-',
                 area=ImagemapArea(
                     x=461, y=533, width=80, height=80
                 )
             ),
             URIImagemapAction(
-                link_uri='https://photos.app.goo.gl/2rd5uxeXQt9WqFoo8',
+                link_uri='https://photos.app.goo.gl/-',
                 area=ImagemapArea(
                     x=684, y=248, width=80, height=80
                 )
             ),
             URIImagemapAction(
-                link_uri='https://photos.app.goo.gl/64qqgEtATwWsYQZG9',
+                link_uri='https://photos.app.goo.gl/-',
                 area=ImagemapArea(
                     x=822, y=324, width=80, height=80
                 )
@@ -230,24 +230,24 @@ def handle_message(event):
     )
         
         Carea = ImagemapSendMessage(
-        base_url='https://imgur.com/KNZChnS.jpg',
+        base_url='https://imgur.com/-.jpg',
         alt_text='圖片',
         base_size=BaseSize(height=720, width=1280),     
         actions=[
             URIImagemapAction(
-                link_uri='https://photos.app.goo.gl/d753KcDKvUZQ298A7',
+                link_uri='https://photos.app.goo.gl/-',
                 area=ImagemapArea(
                     x=834, y=464, width=80, height=80
                 )
             ),
             URIImagemapAction(
-                link_uri='https://photos.app.goo.gl/y5SXYmPvPpqcfNpt5',
+                link_uri='https://photos.app.goo.gl/-',
                 area=ImagemapArea(
                     x=569, y=117, width=80, height=80
                 )
             ),
             URIImagemapAction(
-                link_uri='https://photos.app.goo.gl/V2X3JU4569YpDaD9A',
+                link_uri='https://photos.app.goo.gl/-',
                 area=ImagemapArea(
                     x=397, y=307, width=80, height=80
                 )
@@ -256,24 +256,24 @@ def handle_message(event):
     )
 
         Darea = ImagemapSendMessage(
-        base_url='https://imgur.com/OrsiS5A.jpg',
+        base_url='https://imgur.com-.jpg',
         alt_text='圖片',
         base_size=BaseSize(height=720, width=1280),     
         actions=[
             URIImagemapAction(
-                link_uri='https://photos.app.goo.gl/3y5huYhtaELeZmNd7',
+                link_uri='https://photos.app.goo.gl/-',
                 area=ImagemapArea(
                     x=383, y=436, width=80, height=80
                 )
             ),
             URIImagemapAction(
-                link_uri='https://photos.app.goo.gl/FBVt2vzijEP3n6Fw6',
+                link_uri='https://photos.app.goo.gl/-',
                 area=ImagemapArea(
                     x=654, y=154, width=80, height=80
                 )
             ),
             URIImagemapAction(
-                link_uri='https://photos.app.goo.gl/FSTiatxaYeFy3tfi9',
+                link_uri='https://photos.app.goo.gl/-',
                 area=ImagemapArea(
                     x=818, y=295, width=80, height=80
                 )
@@ -282,24 +282,24 @@ def handle_message(event):
     )
 
         Earea = ImagemapSendMessage(
-        base_url='https://imgur.com/Dx23GSZ.jpg',
+        base_url='https://imgur.com/-jpg',
         alt_text='圖片',
         base_size=BaseSize(height=720, width=1280),     
         actions=[
             URIImagemapAction(
-                link_uri='https://photos.app.goo.gl/ovvuiuBAFJigM2dNA',
+                link_uri='https://photos.app.goo.gl/-',
                 area=ImagemapArea(
                     x=786, y=505, width=80, height=80
                 )
             ),
             URIImagemapAction(
-                link_uri='https://photos.app.goo.gl/CrUHGMmRWCTTb29u6',
+                link_uri='https://photos.app.goo.gl/-',
                 area=ImagemapArea(
                     x=635, y=54, width=80, height=80
                 )
             ),
             URIImagemapAction(
-                link_uri='https://photos.app.goo.gl/JHDGqtpGaz9y2PyP7',
+                link_uri='https://photos.app.goo.gl/J-',
                 area=ImagemapArea(
                     x=465, y=311, width=80, height=80
                 )
@@ -308,24 +308,24 @@ def handle_message(event):
     )
 
         Farea = ImagemapSendMessage(
-        base_url='https://imgur.com/eKs3vk5.jpg',
+        base_url='https://imgur.com/-.jpg',
         alt_text='圖片',
         base_size=BaseSize(height=720, width=1280),     
         actions=[
             URIImagemapAction(
-                link_uri='https://photos.app.goo.gl/dm53gtuhZgzFGADi6',
+                link_uri='https://photos.app.goo.gl/-',
                 area=ImagemapArea(
                     x=779, y=82, width=80, height=80
                 )
             ),
             URIImagemapAction(
-                link_uri='https://photos.app.goo.gl/6VZFJj2TmYGwHKpe9',
+                link_uri='https://photos.app.goo.gl/-',
                 area=ImagemapArea(
                     x=576, y=296, width=80, height=80
                 )
             ),
             URIImagemapAction(
-                link_uri='https://photos.app.goo.gl/uyA2a272PKX2gPsx9',
+                link_uri='https://photos.app.goo.gl/-',
                 area=ImagemapArea(
                     x=449, y=236, width=80, height=80
                 )
@@ -334,24 +334,24 @@ def handle_message(event):
     )
   
         Garea = ImagemapSendMessage(
-        base_url='https://imgur.com/FmLqSAY.jpg',
+        base_url='https://imgur.com/-.jpg',
         alt_text='圖片',
         base_size=BaseSize(height=720, width=1280),     
         actions=[
             URIImagemapAction(
-                link_uri='https://photos.app.goo.gl/AY4fbRXJKRD7wp6M9',
+                link_uri='https://photos.app.goo.gl/-',
                 area=ImagemapArea(
                     x=728, y=145, width=80, height=80
                 )
             ),
             URIImagemapAction(
-                link_uri='https://photos.app.goo.gl/QALf3fojmecoQigU8',
+                link_uri='https://photos.app.goo.gl/-',
                 area=ImagemapArea(
                     x=478, y=421, width=80, height=80
                 )
             ),
             URIImagemapAction(
-                link_uri='https://photos.app.goo.gl/VtXkJcfKFqDfHgwj6',
+                link_uri='https://photos.app.goo.gl-',
                 area=ImagemapArea(
                     x=328, y=264, width=80, height=80
                 )
@@ -360,24 +360,24 @@ def handle_message(event):
     )      
 
         Harea = ImagemapSendMessage(
-        base_url='https://imgur.com/gW2ovgD.jpg',
+        base_url='https://imgur.com/-.jpg',
         alt_text='圖片',
         base_size=BaseSize(height=720, width=1280),     
         actions=[
             URIImagemapAction(
-                link_uri='https://photos.app.goo.gl/CFRF3dNKtwXQLtkn7',
+                link_uri='https://photos.app.goo.gl/-',
                 area=ImagemapArea(
                     x=471, y=152, width=80, height=80
                 )
             ),
             URIImagemapAction(
-                link_uri='https://photos.app.goo.gl/m425L2BJsHwA7rzT9',
+                link_uri='https://photos.app.goo.gl-',
                 area=ImagemapArea(
                     x=713, y=416, width=80, height=80
                 )
             ),
             URIImagemapAction(
-                link_uri='https://photos.app.goo.gl/bSq57KvJPchSNyxF7',
+                link_uri='https://photos.app.goo.gl/-',
                 area=ImagemapArea(
                     x=861, y=243, width=80, height=80
                 )
@@ -385,12 +385,12 @@ def handle_message(event):
         ]
     )     
         bouns_url = []
-        bouns_url.append("https://www.youtube.com/watch?v=072tU1tamd0")
-        bouns_url.append("https://www.youtube.com/watch?v=dQw4w9WgXcQ")
+        bouns_url.append("-")
+        bouns_url.append("-")
         bouns_random = random.randint(0,1)
            
         bouns = ImagemapSendMessage(
-        base_url = 'https://imgur.com/nkL6In8.jpg',
+        base_url = 'https://imgur.com/-.jpg',
         alt_text='圖片',
         base_size=BaseSize(height=540, width=800),     
         actions=[
@@ -557,7 +557,7 @@ def handle_message(event):
                     line_bot_api.reply_message(
                     event.reply_token,
                     TextSendMessage(
-                            text="笑話網址：https://docs.google.com/spreadsheets/d/1x1h5I-UOmT-ANPFKiZqRh-Zpgc0u7JsW7qWwhP2u9tg/edit#gid=0")
+                            text="笑話網址：https://docs.google.com/-")
                     )
                 except Exception as e:
                     print(e)
@@ -629,7 +629,7 @@ def handle_message(event):
     static_tmp_path = "/app"
     reply_arr = []
     reply_arr.append(TextSendMessage('上傳成功'))
-    reply_arr.append(TextSendMessage('相簿網址:https://imgur.com/a/5vg59Vz'))
+    reply_arr.append(TextSendMessage('相簿網址:https://imgur.com/a/-'))
 
 
         
@@ -674,7 +674,7 @@ def googlesheet(info):
     Url = ['https://spreadsheets.google.com/feeds']
     Connect = SAC.from_json_keyfile_name(Json, Url)
     GoogleSheets = gspread.authorize(Connect)
-    Sheet = GoogleSheets.open_by_key('1j1o5P4rs6DXs3oo0kVQccBJslnZVED4jmnmKjT8-9To') # 這裡請輸入妳自己的試算表代號
+    Sheet = GoogleSheets.open_by_key('-') # 這裡請輸入妳自己的試算表代號
     Sheets = Sheet.sheet1
     Sheets.append_row(info)
 
@@ -683,7 +683,7 @@ def everydayjoke(joke):
     Url = ['https://spreadsheets.google.com/feeds']
     Connect = SAC.from_json_keyfile_name(Json, Url)
     GoogleSheets = gspread.authorize(Connect)
-    Sheet = GoogleSheets.open_by_key('1x1h5I-UOmT-ANPFKiZqRh-Zpgc0u7JsW7qWwhP2u9tg') # 這裡請輸入妳自己的試算表代號
+    Sheet = GoogleSheets.open_by_key('-') # 這裡請輸入妳自己的試算表代號
     Sheets = Sheet.sheet1
     Sheets.append_row(joke)
     
@@ -692,7 +692,7 @@ def gettopic():
     Url = ['https://spreadsheets.google.com/feeds']
     Connect = SAC.from_json_keyfile_name(Json, Url)
     GoogleSheets = gspread.authorize(Connect)
-    Sheet = GoogleSheets.open_by_key('15uooAJDgwph0C2jcmLem2ipoKuRhv2u_viog9Cp_Kww') # 這裡請輸入妳自己的試算表代號
+    Sheet = GoogleSheets.open_by_key('-') # 這裡請輸入妳自己的試算表代號
     worksheet = Sheet.get_worksheet(0)
     topic = worksheet.acell('A1').value
     return topic
@@ -702,7 +702,7 @@ def getjoke():
     Url = ['https://spreadsheets.google.com/feeds']
     Connect = SAC.from_json_keyfile_name(Json, Url)
     GoogleSheets = gspread.authorize(Connect)
-    Sheet = GoogleSheets.open_by_key('1x1h5I-UOmT-ANPFKiZqRh-Zpgc0u7JsW7qWwhP2u9tg') # 這裡請輸入妳自己的試算表代號
+    Sheet = GoogleSheets.open_by_key('-') # 這裡請輸入妳自己的試算表代號
     worksheet = Sheet.get_worksheet(0)
     joke = worksheet.col_values(1)
     return joke   
@@ -712,7 +712,7 @@ def getdate():
     Url = ['https://spreadsheets.google.com/feeds']
     Connect = SAC.from_json_keyfile_name(Json, Url)
     GoogleSheets = gspread.authorize(Connect)
-    Sheet = GoogleSheets.open_by_key('15uooAJDgwph0C2jcmLem2ipoKuRhv2u_viog9Cp_Kww') # 這裡請輸入妳自己的試算表代號
+    Sheet = GoogleSheets.open_by_key('-') # 這裡請輸入妳自己的試算表代號
     worksheet = Sheet.get_worksheet(0)
     topic = worksheet.acell('B1').value
     return topic
@@ -722,7 +722,7 @@ def getupdate():
     Url = ['https://spreadsheets.google.com/feeds']
     Connect = SAC.from_json_keyfile_name(Json, Url)
     GoogleSheets = gspread.authorize(Connect)
-    Sheet = GoogleSheets.open_by_key('1lVoD8LDCcHhAf7qfLKaI8YwxPpeNwDgniY7oGZVjslE') # 這裡請輸入妳自己的試算表代號
+    Sheet = GoogleSheets.open_by_key('-') # 這裡請輸入妳自己的試算表代號
     worksheet = Sheet.get_worksheet(0)
     data = worksheet.acell('A1').value
     return data  
@@ -732,7 +732,7 @@ def randomtopic():
     Url = ['https://spreadsheets.google.com/feeds']
     Connect = SAC.from_json_keyfile_name(Json, Url)
     GoogleSheets = gspread.authorize(Connect)
-    Sheet = GoogleSheets.open_by_key('15uooAJDgwph0C2jcmLem2ipoKuRhv2u_viog9Cp_Kww') # 這裡請輸入妳自己的試算表代號
+    Sheet = GoogleSheets.open_by_key('-') # 這裡請輸入妳自己的試算表代號
     worksheet = Sheet.get_worksheet(0)
     topic = random.sample(range(0,9),4)
     topic1 = ""
